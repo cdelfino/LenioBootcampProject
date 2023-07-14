@@ -1,0 +1,33 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 80px;
+}
+
+.separator {
+  position: relative;
+  width: 2.5px;
+  height: 30px;
+  background-color: #ededed;
+  margin: 0 16px;
+}
+
+.searchBar {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+svg {
+  fill: #a8a8a8;
+  width: 34px;
+  height: 34px;
+
+}
