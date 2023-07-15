@@ -1,0 +1,32 @@
+.superheroCard {
+  background-color: rgb(212, 212, 212);
+  height: 380px;
+  width: 256px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/*Card shadow*/
+.superheroCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* UI Properties */
+  background: transparent linear-gradient(26deg, #00000000 0%, #00000080) 0% 0%
+    no-repeat padding-box;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.superheroCard h1 {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 23px;
+  margin-left: 23px;
+  font-size: 19px;
+}

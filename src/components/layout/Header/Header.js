@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
-import SearchIcon from "../icons/SearchIcon";
-import StarIcon from "../icons/StarIcon";
+import SearchIcon from "../../icons/SearchIcon";
+import StarIcon from "../../icons/StarIcon";
 
 const Header = () => {
   return (
