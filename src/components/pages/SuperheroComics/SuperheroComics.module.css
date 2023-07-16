@@ -1,0 +1,74 @@
+.comics {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad del 50% */
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comicContainer {
+  position: relative;
+  top: 0;
+  width: 677px;
+  height: 30vw;
+  background-color: #ffffff;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.comicTopBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.superheroName {
+  font-size: 24px;
+}
+
+.closeButton {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.comicList {
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+.comicList {
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+.comicList::-webkit-scrollbar {
+  width: 6px; /* Anchura de la barra de desplazamiento */
+}
+
+.comicList::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 3px; /* Radio de borde del pulgar de la barra de desplazamiento */
+}
+
+.comicList::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color del pulgar de la barra de desplazamiento en el estado de hover */
+}
+
+.comicList::-webkit-scrollbar-thumb:active {
+  background-color: #444; /* Color del pulgar de la barra de desplazamiento en el estado de clic */
+}
+
+.comicName {
+  font-size: 18px;
+  margin-bottom: 10px;
+}

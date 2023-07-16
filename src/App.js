@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/layout/Header/Header";
-import SuperheroesList from "./components/pages/SuperheroesList";
+import SuperheroesList from "./components/pages/SuperheroesList/SuperheroesList";
 import UseSuperheroes from "./hooks/UseSuperheroes";
-import SuperheroCard from "./components/common/SuperheroCard/SuperheroCard";
+import SuperheroComics from "./components/pages/SuperheroComics/SuperheroComics";
 
 function App() {
   const { superheroes, isLoading } = UseSuperheroes(); // Utiliza el hook como 'UseSuperheroes'
@@ -16,6 +16,7 @@ function App() {
       ) : (
         <SuperheroesList superheroes={superheroes} isLoading={isLoading} />
       )}
+      <SuperheroComics/>
     </div>
   );
 }

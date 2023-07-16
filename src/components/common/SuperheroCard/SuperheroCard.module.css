@@ -11,6 +11,7 @@
   object-position: center;
   position: relative;
   z-index: 1;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
 }
 
 .shadowOverlayBottom {
@@ -22,6 +23,7 @@
   background: linear-gradient(to top, rgb(0 0 0 / 77%), rgba(0, 0, 0, 0));
   z-index: 2;
 }
+
 .shadowOverlayTop {
   position: absolute;
   top: 0;
@@ -40,10 +42,16 @@
   z-index: 2;
 }
 
-h1 {
+.shadowOverlayTop,
+.shadowOverlayBottom,
+.superheroCard {
+  border-radius: 4px;
+}
+
+.superheroCardContainer h1 {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 23px;
+  left: 23px;
   margin: 0;
   font-size: 19px;
   color: white;

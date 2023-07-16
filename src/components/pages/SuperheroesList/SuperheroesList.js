@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./SuperheroesList.module.css";
-import SuperheroCard from "../common/SuperheroCard/SuperheroCard";
+import SuperheroCard from "../../common/SuperheroCard/SuperheroCard";
 
 const SuperheroesList = ({ superheroes, isLoading }) => {
-  console.log("hola")
+  console.log("hola");
   return (
     <div className={styles.gridContainer}>
       <div className={styles.grid}>
