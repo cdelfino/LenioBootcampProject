@@ -32,6 +32,16 @@
   z-index: 10;
 }
 
+.comicTopBar button {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
+  padding-bottom: 4px;
+}
+
 .superheroName {
   font-size: 24px;
 }
@@ -44,12 +54,11 @@
 .comicList {
   margin-top: 20px;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.comicList {
-  margin-top: 20px;
-  overflow-y: scroll;
-}
 
 .comicList::-webkit-scrollbar {
   width: 6px; /* Anchura de la barra de desplazamiento */

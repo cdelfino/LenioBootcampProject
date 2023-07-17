@@ -16,7 +16,6 @@ function App() {
       ) : (
         <SuperheroesList superheroes={superheroes} isLoading={isLoading} />
       )}
-      <SuperheroComics/>
     </div>
   );
 }

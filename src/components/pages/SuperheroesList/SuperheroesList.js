@@ -3,7 +3,6 @@ import styles from "./SuperheroesList.module.css";
 import SuperheroCard from "../../common/SuperheroCard/SuperheroCard";
 
 const SuperheroesList = ({ superheroes, isLoading }) => {
-  console.log("hola");
   return (
     <div className={styles.gridContainer}>
       <div className={styles.grid}>
@@ -11,6 +10,7 @@ const SuperheroesList = ({ superheroes, isLoading }) => {
           superheroes.map((superhero) => (
             <SuperheroCard
               key={superhero.id}
+              id={superhero.id} 
               name={superhero.name}
               thumbnail={superhero.thumbnail}
             />
