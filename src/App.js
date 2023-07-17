@@ -1,20 +1,23 @@
 import React from "react";
 import "./App.css";
+
+
 import Header from "./components/layout/Header/Header";
 import SuperheroesList from "./components/pages/SuperheroesList/SuperheroesList";
 import UseSuperheroes from "./hooks/UseSuperheroes";
-import SuperheroComics from "./components/pages/SuperheroComics/SuperheroComics";
+import Loading from "./components/pages/Loading/Loading";
 
 function App() {
-  const { superheroes, isLoading } = UseSuperheroes(); // Utiliza el hook como 'UseSuperheroes'
+  const { superheroes, isLoading } = UseSuperheroes();
 
   return (
     <div className="App">
       <Header />
+
       {isLoading ? (
-        <div>Loading...</div> /*------falta darle estilos al loading------*/
+       <Loading/>
       ) : (
-        <SuperheroesList superheroes={superheroes} isLoading={isLoading} />
+        <SuperheroesList superheroes={superheroes} />
       )}
     </div>
   );
