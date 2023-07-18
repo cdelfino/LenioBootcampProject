@@ -16,7 +16,7 @@ const SuperheroCard = ({ id, name, thumbnail }) => {
       <div className={styles.shadowOverlayTop}></div>
       <div className={styles.shadowOverlayBottom}></div> {/* Div de sombra */}
       <h1 className={styles.superheroTitle}>{name}</h1>
-      {showComics && <SuperheroComics superheroId={id} />}
+      {showComics && <SuperheroComics superheroId={id} superheroName={name} />}
     </div>
   );
 };

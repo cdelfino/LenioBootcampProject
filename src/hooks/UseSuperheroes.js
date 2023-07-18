@@ -1,24 +1,22 @@
 import { useEffect, useState } from "react";
 import { getSuperheroes } from "../api/superheroes";
 
-const UseSuperheroes = () => {
+const UseSuperheroes = (searchTerm) => {
   const [superheroes, setSuperheroes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getSuperheroes()
+    setIsLoading(true);
+    getSuperheroes(searchTerm)
       .then((superheroesList) => {
         setSuperheroes(superheroesList);
         setIsLoading(false);
-        console.log(superheroesList);
       })
       .catch((error) => {
         console.error("Error fetching superheroes:", error);
         setIsLoading(false);
       });
-
-    return () => {};
-  }, []);
+  }, [searchTerm]);
 
   return { superheroes, isLoading };
 };

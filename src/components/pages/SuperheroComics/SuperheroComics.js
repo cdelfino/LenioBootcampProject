@@ -3,8 +3,8 @@ import styles from "./SuperheroComics.module.css";
 import ComicCard from "../../common/ComicCard/ComicCard";
 import UseComics from "../../../hooks/UseComics";
 
-const SuperheroComics = ({ superheroId }) => {
-  const { comics, isLoading } = UseComics(superheroId);
+const SuperheroComics = ({ superheroId, superheroName }) => {
+  const { comics } = UseComics(superheroId);
 
   const [showComics, setShowComics] = useState(true);
   const handleCrossClick = () => {
@@ -15,15 +15,11 @@ const SuperheroComics = ({ superheroId }) => {
     return null; // Retorna null para desmontar el componente
   }
 
-  if (isLoading) {
-    return <div>Cargando cómics...</div>;
-  }
-
   return (
     <div className={styles.comics}>
       <div className={styles.comicContainer}>
         <div className={styles.comicTopBar}>
-          <h1>Nombre superheroe</h1>
+          <h1>{superheroName}</h1>
           <button>
             <img
               onClick={handleCrossClick}
