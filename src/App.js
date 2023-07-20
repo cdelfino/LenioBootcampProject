@@ -4,6 +4,7 @@ import Header from "./components/layout/Header/Header";
 import SuperheroesList from "./components/pages/SuperheroesList/SuperheroesList";
 import UseSuperheroes from "./hooks/UseSuperheroes";
 import Loading from "./components/pages/Loading/Loading";
+import FavoritesPage from "./components/pages/FavoritesPage/FavoritesPage";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");

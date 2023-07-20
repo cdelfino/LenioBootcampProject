@@ -58,3 +58,52 @@
   color: white;
   z-index: 3;
 }
+
+.starIconContainer {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 4;
+}
+
+.starClicked {
+  filter: sepia(67%) saturate(4610%) hue-rotate(322deg) brightness(130%)
+    contrast(104%);
+}
+/* Estilos para el modal */
+
+.modalContent {
+  top: 0;
+  right: 0;
+  z-index: 99;
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modalCloseButton {
+  background-color: aqua;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Clases para mostrar y ocultar el modal */
+.modalClosed {
+  display: none;
+}
+.modalOpen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad del 50% */
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
