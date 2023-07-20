@@ -4,16 +4,23 @@ import SuperheroComics from "../SuperheroComics/SuperheroComics";
 import star from "./star.png";
 
 const SuperheroCard = ({ id, name, thumbnail }) => {
+  const imageUrl = `${thumbnail.path}.${thumbnail.extension}`;
+  const isImageAvailable =
+    thumbnail.path !==
+    "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available";
+
   // Obtenemos el valor de starClicked del localStorage o lo inicializamos a false
   const [starClicked, setStarClicked] = useState(
     localStorage.getItem(`superhero_${id}`) === "true" ? true : false
   );
 
+
   useEffect(() => {
     // Almacenamos el valor de starClicked en el localStorage cada vez que cambie
     localStorage.setItem(`superhero_${id}`, starClicked);
-    localStorage.setItem(`superhero_${id}_name`, name); // Almacenamos el name en el localStorage
-  }, [starClicked, id, name]); // Asegúrate de incluir name en la dependencia de useEffect
+    localStorage.setItem(`superhero_${id}_name`, name);
+    localStorage.setItem(`superhero_${id}_imageUrl`, imageUrl); // Almacenar la URL de la imagen en el localStorage
+  }, [starClicked, id, name, imageUrl]); 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -38,7 +45,9 @@ const SuperheroCard = ({ id, name, thumbnail }) => {
     setStarClicked(!starClicked);
   };
 
-  const imageUrl = thumbnail.path + "." + thumbnail.extension;
+  if (!isImageAvailable) {
+    return null; // Si la imagen no está disponible, no se renderiza la card
+  }
 
   return (
     <div className={styles.superheroCardContainer}>
@@ -53,7 +62,7 @@ const SuperheroCard = ({ id, name, thumbnail }) => {
         />
       </div>
       <div className={styles.shadowOverlayTop} onClick={handleOpenModal}></div>
-      <div className={styles.shadowOverlayBottom}></div> {/* Div de sombra */}
+      <div className={styles.shadowOverlayBottom}></div>
       <h1 className={styles.superheroTitle}>{name}</h1>
       <div className={modalClassName}>
         {isModalOpen && (

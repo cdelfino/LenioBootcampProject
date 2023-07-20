@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SuperheroesList.module.css";
 import SuperheroCard from "../../common/SuperheroCard/SuperheroCard";
+import Loading from "../Loading/Loading";
 
 const SuperheroesList = ({ superheroes, isLoading }) => {
   // Función de comparación para orden aleatorio
@@ -13,16 +14,20 @@ const SuperheroesList = ({ superheroes, isLoading }) => {
 
   return (
     <div className={styles.gridContainer}>
-      <div className={styles.grid}>
-        {shuffledSuperheroes.map((superhero) => (
-          <SuperheroCard
-            key={superhero.id}
-            id={superhero.id}
-            name={superhero.name}
-            thumbnail={superhero.thumbnail}
-          />
-        ))}
-      </div>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className={styles.grid}>
+          {shuffledSuperheroes.map((superhero) => (
+            <SuperheroCard
+              key={superhero.id}
+              id={superhero.id}
+              name={superhero.name}
+              thumbnail={superhero.thumbnail}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

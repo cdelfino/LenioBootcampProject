@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Header.module.css";
 import SearchIcon from "../../icons/SearchIcon";
 import StarIcon from "../../icons/StarIcon";
+import { Link } from "react-router-dom";
 
 const Header = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,11 +19,11 @@ const Header = ({ onSearch }) => {
 
   return (
     <header className={styles.headerContainer}>
-      <img
+     <Link to="/"> <img
         src="https://logodownload.org/wp-content/uploads/2017/05/marvel-logo-4.png"
         alt="Marvel Logo"
         className={styles.logo}
-      />
+      /></Link>
       <div className={styles.separator}></div>
       <SearchIcon className={styles.svg} />
       <input
@@ -33,7 +34,9 @@ const Header = ({ onSearch }) => {
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
       />
-      <StarIcon className={styles.svg} />
+      <Link to="/favorites" className={styles.link}>
+        <StarIcon className={styles.svg} />
+      </Link>
       <div className={styles.separator}></div>
     </header>
   );
