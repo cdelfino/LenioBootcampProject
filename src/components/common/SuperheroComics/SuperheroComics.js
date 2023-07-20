@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./SuperheroComics.module.css";
 import ComicCard from "../../common/ComicCard/ComicCard";
 import UseComics from "../../../hooks/UseComics";

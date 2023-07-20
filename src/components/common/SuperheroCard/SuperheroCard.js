@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./SuperheroCard.module.css";
-import SuperheroComics from "../../pages/SuperheroComics/SuperheroComics";
+import SuperheroComics from "../SuperheroComics/SuperheroComics";
 import star from "./star.png";
 
 const SuperheroCard = ({ id, name, thumbnail }) => {
+  // Obtenemos el valor de starClicked del localStorage o lo inicializamos a false
+  const [starClicked, setStarClicked] = useState(
+    localStorage.getItem(`superhero_${id}`) === "true" ? true : false
+  );
+
+  useEffect(() => {
+    // Almacenamos el valor de starClicked en el localStorage cada vez que cambie
+    localStorage.setItem(`superhero_${id}`, starClicked);
+    localStorage.setItem(`superhero_${id}_name`, name); // Almacenamos el name en el localStorage
+  }, [starClicked, id, name]); // Asegúrate de incluir name en la dependencia de useEffect
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -11,7 +22,7 @@ const SuperheroCard = ({ id, name, thumbnail }) => {
   };
 
   const handleCloseModal = () => {
-    console.log('se cerro')
+    console.log("se cerro");
     setIsModalOpen(false);
   };
 
@@ -23,7 +34,6 @@ const SuperheroCard = ({ id, name, thumbnail }) => {
     handleCloseModal();
   };
 
-  const [starClicked, setStarClicked] = useState(false);
   const handleStarClick = () => {
     setStarClicked(!starClicked);
   };
@@ -40,10 +50,9 @@ const SuperheroCard = ({ id, name, thumbnail }) => {
           className={`${styles.starIcon} ${
             starClicked ? styles.starClicked : ""
           }`}
-          
         />
       </div>
-      <div className={styles.shadowOverlayTop}onClick={handleOpenModal}></div>
+      <div className={styles.shadowOverlayTop} onClick={handleOpenModal}></div>
       <div className={styles.shadowOverlayBottom}></div> {/* Div de sombra */}
       <h1 className={styles.superheroTitle}>{name}</h1>
       <div className={modalClassName}>
@@ -54,11 +63,6 @@ const SuperheroCard = ({ id, name, thumbnail }) => {
             handleClose={handleClose}
           />
         )}
-        <div className={styles.modalContent}>
-          <button className={styles.modalCloseButton} onClick={handleClose}>
-            cerrar
-          </button>
-        </div>
       </div>
     </div>
   );

@@ -5,11 +5,13 @@ import SuperheroesList from "./components/pages/SuperheroesList/SuperheroesList"
 import UseSuperheroes from "./hooks/UseSuperheroes";
 import Loading from "./components/pages/Loading/Loading";
 import FavoritesPage from "./components/pages/FavoritesPage/FavoritesPage";
+import { getSuperheroesFromLocalStorage } from "./components/common/SuperheroCard/localStorage";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const { superheroes, isLoading } = UseSuperheroes(searchTerm);
-
+  const favoriteSuperheroes = getSuperheroesFromLocalStorage();
+console.log(favoriteSuperheroes, "hoal");
   const handleSearch = (searchTerm) => {
     setSearchTerm(searchTerm);
   };
