@@ -1,0 +1,31 @@
+.favoritesCard {
+  border-radius: 5px;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+}
+
+.favoritesImage {
+  width: 150px;
+  height: 150px;
+  object-fit: fill;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.favoritesDetails {
+  flex: 1;
+}
+
+.favoritesName {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.favoritesDescription {
+  font-size: 14px;
+}

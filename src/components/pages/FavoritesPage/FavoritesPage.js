@@ -1,6 +1,7 @@
 import React from "react";
 import { getSuperheroesFromLocalStorage } from "../../common/SuperheroCard/localStorage";
 import styles from "./FavoritesPage.module.css";
+import FavoritesCard from "../../common/FavoritesCard/FavoritesCard";
 
 const FavoritesPage = () => {
   // Filtrar los superhéroes favoritos
@@ -13,17 +14,7 @@ const FavoritesPage = () => {
       <h1>Mis favoritos</h1>
       <div className={styles.favorites}>
         {favoriteSuperheroes.map((superhero) => (
-          <div key={superhero.id} className={styles.favoritesCard}>
-            <img
-              src={superhero.imageUrl}
-              alt={superhero.name}
-              className={styles.favoritesImage}
-            />
-            <div className={styles.favoritesDetails}>
-              <h1 className={styles.favoritesName}>{superhero.name}</h1>
-              {/* Agrega aquí cualquier otra información que desees mostrar */}
-            </div>
-          </div>
+         <FavoritesCard key={superhero.id} superhero={superhero} />
         ))}
       </div>
     </div>

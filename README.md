@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Leniolabs Bootcamp Project - Marvel Searcher 🦸🏻‍♀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![gif del proyecto](link-del-gif)
 
-## Available Scripts
+## Tecnologías Utilizadas:
 
-In the project directory, you can run:
+- **React**: La base de la aplicación, permite crear componentes reutilizables y gestionar el estado de la interfaz de usuario.
+- **React Router**: Se utiliza para el enrutamiento y la navegación entre diferentes páginas y componentes.
+- **Local Storage**: Empleado para almacenar y persistir los datos de los superhéroes marcados como favoritos por el usuario.
+- **CSS Modules**: Para una gestión eficiente y modular del CSS, evitando conflictos y facilitando el mantenimiento.
+- **Fetch API**: Utilizado para obtener datos de la API de Marvel para mostrar información de los superhéroes y realizar búsquedas.
+- **JavaScript ES6+**: Se utiliza la última versión de JavaScript para aprovechar las funcionalidades modernas del lenguaje.
+- **Responsive Design**: La aplicación está diseñada para adaptarse a diferentes tamaños de pantalla y dispositivos.
 
-### `npm start`
+## Deploy
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El deploy se realizó utilizando AWS Amplify. La aplicación está actualmente alojada en AWS y se puede acceder a ella a través de este enlace: https://main.d28q8tnzdofg66.amplifyapp.com
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Funcionalidades Principales:
 
-### `npm test`
+1. **Búsqueda de superhéroes**: Los usuarios pueden buscar superhéroes por su nombre utilizando una función de búsqueda inteligente. Los resultados se mostrarán cada vez que el usuario presione la tecla "Enter".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Visualización de cómics**: Al seleccionar un superhéroe de la lista, se muestra una vista detallada con los comics en los que éste aparece, además de una descripción e imagen del mismo.
 
-### `npm run build`
+3. **Página de favoritos**: Los usuarios pueden marcar sus superhéroes favoritos, que se guardarán en el Local Storage para que persistan entre sesiones. Existe una página dedicada a mostrar todos los superhéroes marcados como favoritos por el usuario, lo que facilita su acceso y visualización.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalación y Uso
+1) Clona este repositorio en tu máquina local utilizando el siguiente comando:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/cdelfino/LenioBootcampProject
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+2) Instala las dependencias del proyecto con npm o yarn:   
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+// o
+yarn install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3) Ejecuta la aplicación localmente:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+// o
+yarn start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Créditos y Recursos Externos:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **API de Marvel**: La aplicación utiliza la API de Marvel para obtener información sobre los superhéroes. Puedes encontrar más información en [https://developer.marvel.com](https://developer.marvel.com).

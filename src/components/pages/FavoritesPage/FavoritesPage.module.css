@@ -1,6 +1,5 @@
-/* FavoritesPage.module.css */
 .favoritesContainer {
-  margin:30px auto;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,34 +16,17 @@
   justify-items: center;
 }
 
-.favoritesCard {
-  border-radius: 5px;
-  display: flex;
-  background-color: #fff;
-  align-items: center;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  width: 400px; /* Puedes ajustar el ancho según tus necesidades */
+@media screen and (max-width: 892px) {
+  .favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.favoritesImage {
-  width: 150px;
-  height: 150px;
-  object-fit: fill;
-  margin-right: 20px;
-  border-radius: 5px;
-}
-
-.favoritesDetails {
-  flex: 1;
-}
-
-.favoritesName {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.favoritesDescription {
-  font-size: 14px;
+@media screen and (max-width: 1335px) {
+  .favorites {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
