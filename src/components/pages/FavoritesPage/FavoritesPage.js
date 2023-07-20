@@ -1,5 +1,5 @@
 import React from "react";
-import { getSuperheroesFromLocalStorage } from "../../common/SuperheroCard/localStorage";
+import { getSuperheroesFromLocalStorage } from "../../common/SuperheroCard/localStorageSuperheroes";
 import styles from "./FavoritesPage.module.css";
 import FavoritesCard from "../../common/FavoritesCard/FavoritesCard";
 

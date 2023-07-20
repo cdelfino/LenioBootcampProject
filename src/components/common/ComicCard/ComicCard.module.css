@@ -24,6 +24,16 @@
   flex-direction: column;
   gap: 6px;
   justify-content: flex-start;
+  width: 100%;
+}
+
+.starIcon {
+  filter: invert(80%);
+}
+
+.starClicked {
+  filter: sepia(67%) saturate(4610%) hue-rotate(322deg) brightness(104%)
+    contrast(106%);
 }
 
 .title {
@@ -33,7 +43,8 @@
 
 .titleContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   margin-bottom: 5px;
 }
 .description {

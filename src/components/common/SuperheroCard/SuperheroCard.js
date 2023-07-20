@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./SuperheroCard.module.css";
 import SuperheroComics from "../SuperheroComics/SuperheroComics";
-import star from "./star.png";
+import star from "../../icons/star.png";
 
 const SuperheroCard = ({ id, name, thumbnail }) => {
   const imageUrl = `${thumbnail.path}.${thumbnail.extension}`;
@@ -29,7 +29,6 @@ const SuperheroCard = ({ id, name, thumbnail }) => {
   };
 
   const handleCloseModal = () => {
-    console.log("se cerro");
     setIsModalOpen(false);
   };
 
