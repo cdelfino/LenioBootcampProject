@@ -1,7 +1,7 @@
 .favoritesCard {
   border-radius: 5px;
   background-color: #fff;
-  align-items: center;
+  align-items: flex-start;
   border: 1px solid #ccc;
   margin: 10px;
   height: 510px;

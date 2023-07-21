@@ -11,7 +11,7 @@ const FavoriteComicCard = ({ comic }) => {
           <p className={styles.favoritesDescription}>{comic.description}</p>
         ) : (
           <p className={styles.favoritesDescription}>
-            Description not available
+            Description not available.
           </p>
         )}
       </div>
