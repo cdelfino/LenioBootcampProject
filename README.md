@@ -1,6 +1,6 @@
 # Leniolabs Bootcamp Project - Marvel Searcher 🦸🏻‍♀
 
-![gif del proyecto](https://res.cloudinary.com/dog4ri0x9/image/upload/v1689908044/Animation_lgpfbe.gif)
+![gif del proyecto](https://res.cloudinary.com/dog4ri0x9/image/upload/v1689908445/Screenshot_111_covmiw.jpg)
 
 ## Tecnologías Utilizadas:
 
