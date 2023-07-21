@@ -22,7 +22,15 @@ const SuperheroComics = ({ superheroId, superheroName, handleClose }) => {
         </div>
         <div className={styles.comicList}>
           {comics.map((comic) => (
-            <ComicCard key={comic.id} comic={comic} />
+            <ComicCard
+              key={comic.id}
+              id={comic.id}
+              title={comic.title}
+              description={comic.description}
+              thumbnail={comic.thumbnail}
+              path={comic.thumbnail.path}
+              extension={comic.thumbnail.extension}
+            />
           ))}
         </div>
       </div>

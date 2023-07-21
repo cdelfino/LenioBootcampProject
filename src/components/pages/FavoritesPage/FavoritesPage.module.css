@@ -7,7 +7,8 @@
   gap: 15px;
 }
 
-.favorites {
+.favoriteSuperheroes,
+.favoriteComics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
@@ -15,9 +16,18 @@
   align-items: center;
   justify-items: center;
 }
+.favoriteSuperheroes {
+  grid-template-columns: repeat(3, 1fr);
+}
+.favoriteComics {
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 44px;
+  row-gap: 44px;
+  width: 100%;
+}
 
 @media screen and (max-width: 892px) {
-  .favorites {
+  .favoriteSuperheroes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +36,25 @@
 }
 
 @media screen and (max-width: 1335px) {
-  .favorites {
+  .favoriteSuperheroes {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .favoriteComics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 957px) {
+  .favoriteComics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 656px) {
+  .favoriteComics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }

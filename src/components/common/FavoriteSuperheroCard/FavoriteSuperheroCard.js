@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./FavoritesCard.module.css";
+import styles from "./FavoriteSuperheroCard.module.css";
 
-const FavoritesCard = ({ superhero }) => {
+const FavoriteSuperheroCard = ({ superhero }) => {
   return (
     <div key={superhero.id} className={styles.favoritesCard}>
       <img
@@ -17,4 +17,4 @@ const FavoritesCard = ({ superhero }) => {
   );
 };
 
-export default FavoritesCard;
+export default FavoriteSuperheroCard;
